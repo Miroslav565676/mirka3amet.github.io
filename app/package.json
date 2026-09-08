@@ -1,0 +1,34 @@
+{
+  "name": "mirka3amet",
+  "version": "1.0.0",
+  "description": "mirka3amet.com",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.mirka3amet.app",
+    "productName": "mirka3amet",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "../index.html",
+      "../css/**/*",
+      "../js/**/*",
+      "../music.m4a"
+    ],
+    "win": {
+      "target": "dir",
+      "signingHashAlgorithms": null,
+      "sign": false,
+      "signAndEditExecutable": false
+    }
+  },
+  "dependencies": {
+    "pkg": "^5.8.1"
+  }
+}

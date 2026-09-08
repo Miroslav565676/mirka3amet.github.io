@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>mirka3amet.com</title>
+  <meta name="description" content="mirka3amet.com — игры, экономика, стоки, музыка и многое другое. Многофункциональный Discord бот.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="mirka3amet.com">
+  <meta property="og:description" content="Игры, экономика, стоки, музыка — всё в одном Discord боте.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mirka3amet.com">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="galaxy">
+    <canvas id="starfield"></canvas>
+  </div>
+  <div class="hole-glow"></div>
+
+  <div class="wrap">
+    <header>
+      <img class="avatar" src="https://cdn.discordapp.com/avatars/1502328485824303175/0000.png" alt="BOCTOK-1 HELPER" onerror="this.style.visibility='hidden'">
+      <h1>mirka3amet.com</h1>
+      <p class="tag">Игры • Экономика • Многофункциональный Discord бот</p>
+      <a class="btn btn-invite" href="https://discord.com/oauth2/authorize?client_id=1502328485824303175&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener">➕ Пригласить бота в Discord</a>
+    </header>
+
+    <!-- SCREEN: main menu -->
+    <div class="screen active" id="screen-menu">
+      <div class="menu-two">
+        <button class="btn btn-menubtn" id="btnPlay">▶ Играть</button>
+        <button class="btn btn-menubtn" id="btnCredits">ℹ️ Кто создал</button>
+      </div>
+      <div class="card">
+        <h2>Возможности</h2>
+        <ul>
+          <li><span class="e">💰</span> Экономика, монеты и уровни</li>
+          <li><span class="e">📈</span> Стоки и ставки с живыми таймерами</li>
+          <li><span class="e">🎵</span> Музыка в голосовых каналах</li>
+          <li><span class="e">🔇</span> AFK-каналы с контролем микрофона</li>
+          <li><span class="e">🎁</span> Сундуки, сезонные пропуска, опросы</li>
+          <li><span class="e">⚙️</span> Логи, мьюты, автотеги и многое другое</li>
+        </ul>
+      </div>
+      <div class="music-bar">
+        <button id="musicBtn">🎵 Включить музыку</button>
+        <audio id="bgMusic" src="music.m4a" loop preload="auto"></audio>
+        <div class="small" id="musicErr" style="color:var(--red); display:none;">Файл music.m4a не найден — положи его рядом с index.html.</div>
+      </div>
+    </div>
+
+    <!-- SCREEN: bouncing ball game -->
+    <div class="screen" id="screen-game">
+      <div class="backbar"><button class="btn btn-back" id="backFromGame">← Назад</button></div>
+      <div class="card">
+        <h2>🎡 Игра — Прыгающий шар</h2>
+        <p class="panel-desc">Шар летит в круге. Отскакивает от стенок, счёт растёт.</p>
+        <canvas id="bounceBoard"></canvas>
+        <div class="clicker-top">
+          <div class="stat">Прыжков: <b id="jumps">20</b></div>
+          <div class="stat">Деньги: <b id="money" style="color:#a6e3a1; font-size:1.3rem;">$0</b></div>
+          <button class="btn" id="bounceRestart" style="width:auto; padding:8px 16px;">🔄 Сброс</button>
+        </div>
+        <div class="small" id="status2">Базовый прыжок: 20. Каждый удар о круг +$1.</div>
+        <div class="game-bottom triple">
+          <button class="upgrade-btn" id="upgradeBall">
+            ➕ Шар
+            <div class="ub-cost" id="upgradeCost">$50</div>
+            <div class="ub-count" id="upgradeCount">x1</div>
+          </button>
+          <button class="upgrade-btn orange" id="upgradePower">
+            ⚡ Сила
+            <div class="ub-cost" id="upgradePowerCost">$30</div>
+            <div class="ub-count" id="upgradePowerCount">Ур. 0/10</div>
+          </button>
+          <button class="upgrade-btn purple" id="upgradeSize" style="grid-column:1/3;">
+            💎 Рост шара + сила
+            <div class="ub-cost" id="upgradeSizeCost">$250</div>
+            <div class="ub-count" id="upgradeSizeCount">x0</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN: credits -->
+    <div class="screen" id="screen-credits">
+      <div class="backbar"><button class="btn btn-back" id="backFromCredits">← Назад</button></div>
+      <div class="card">
+        <h2>Кто создал</h2>
+        <img class="credit-avatar" src="https://cdn.discordapp.com/avatars/1502328485824303175/0000.png" alt="vostok1sssr" onerror="this.style.visibility='hidden'">
+        <p class="credit-name">vostok1sssr</p>
+        <p class="credit-tag">Discord: vostok1sssr</p>
+        <p class="panel-desc">Создатель mirka3amet.com</p>
+      </div>
+    </div>
+
+    <footer>mirka3amet.com • сделано с 🤖</footer>
+  </div>
+
+  <script src="js/starfield.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

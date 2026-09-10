@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>bounce sim — скачать APK для Android</title>
+  <meta name="description" content="bounce sim — захватывающая эконом-игра с шарами. Бесплатный APK для Android. Скины, ящики, перерождение, токены и многое другое.">
+  <meta property="og:title" content="bounce sim — APK для Android">
+  <meta property="og:description" content="Бесплатная весёлая эконом-игра с шарами. Скачай APK и играй офлайн!">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23a855f7'/><circle cx='50' cy='50' r='40' fill='none' stroke='%23c084fc' stroke-width='4'/><circle cx='36' cy='40' r='7' fill='%23e8d2ff'/><circle cx='60' cy='42' r='5' fill='%23e8d2ff'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="hole-glow"></div>
+
+  <div class="wrap">
+    <header>
+      <div class="ball-logo">
+        <svg viewBox="0 0 100 100" width="96" height="96">
+          <defs>
+            <radialGradient id="grad" cx="35%" cy="30%" r="80%">
+              <stop offset="0%" stop-color="#e8d2ff"/>
+              <stop offset="45%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#581c87"/>
+            </radialGradient>
+          </defs>
+          <circle cx="50" cy="50" r="42" fill="url(#grad)"/>
+          <circle cx="50" cy="50" r="42" fill="none" stroke="#c084fc" stroke-width="3"/>
+          <ellipse cx="50" cy="50" rx="42" ry="42" fill="none" stroke="#e8d2ff" stroke-width="1" opacity="0.5"/>
+          <circle cx="34" cy="38" r="7" fill="#fff" opacity="0.85"/>
+          <circle cx="60" cy="42" r="4.5" fill="#fff" opacity="0.5"/>
+        </svg>
+      </div>
+      <h1>bounce sim</h1>
+      <p class="tag">Космическая эконом-игра для Android</p>
+      <div class="badges">
+        <span class="badge">🆓 Бесплатно</span>
+        <span class="badge">📶 Офлайн</span>
+        <span class="badge">🎮 Аркада</span>
+        <span class="badge">📱 Android 8+</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="screenshot">
+        <div class="s-img">
+          <svg viewBox="0 0 200 350" width="100%" height="100%">
+            <rect width="200" height="350" fill="#05000d"/>
+            <circle cx="60" cy="340" r="30" fill="#6d28d9" opacity="0.6"/>
+            <circle cx="60" cy="340" r="14" fill="#0a0118"/>
+            <circle cx="100" cy="36" r="60" fill="none" stroke="#6d28d9" stroke-width="1.5"/>
+            <circle cx="100" cy="36" r="56" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+            <circle cx="100" cy="36" r="30" fill="url(#sg)"/>
+            <path d="M100 62 A26 22 0 1 1 100 10" fill="none" stroke="#e8d2ff" stroke-width="2"/>
+            <rect x="18" y="120" width="164" height="14" rx="7" fill="#6d28d9"/>
+            <rect x="18" y="148" width="120" height="14" rx="7" fill="#1e1b2e"/>
+            <rect x="18" y="178" width="164" height="40" rx="10" fill="#0a0a18" stroke="#6d28d9" stroke-width="1"/>
+            <text x="28" y="200" font-size="11" fill="#a6e3a1">Прыжков: 20</text>
+            <rect x="18" y="228" width="164" height="40" rx="10" fill="#0a0a18" stroke="#6d28d9" stroke-width="1"/>
+            <text x="28" y="250" font-size="11" fill="#c4b5fd">Деньги: $1.2k</text>
+            <rect x="18" y="278" width="78" height="34" rx="10" fill="#065f46" stroke="#059669" stroke-width="1"/>
+            <rect x="104" y="278" width="78" height="34" rx="10" fill="#7c2d12" stroke="#ea580c" stroke-width="1"/>
+          </svg>
+          <defs>
+            <radialGradient id="sg" cx="35%" cy="30%" r="80%">
+              <stop offset="0%" stop-color="#e8d2ff"/>
+              <stop offset="45%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#581c87"/>
+            </radialGradient>
+          </defs>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h2>Шар летит.<br>Каждый удар — деньги!</h2>
+        <p>Твоя задача — не дать шару упасть на круг. Отбивайся, зарабатывай монеты и прокачивайся до бесконечности.</p>
+        <a class="btn btn-download" href="https://github.com/Miroslav565676/mirka3amet.github.io/releases/download/v1.1.0/bounce-sim.apk" download="bounce-sim.apk">
+          <span class="dl-icon">⬇</span>
+          Скачать APK
+          <span class="dl-meta">v1.1.0 • 59 МБ • Android</span>
+        </a>
+        <div class="dl-note">Установка с этого сайта безопасна. Разреши «установку из неизвестных источников» при первом запуске.</div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2 class="sec-title">Что внутри?</h2>
+      <div class="grid">
+        <div class="feat">
+          <div class="feat-icon">💸</div>
+          <h3>Экономика</h3>
+          <p>Зарабатывай деньги за каждый удар, прокачивай прыжки, силу и размер шара.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🎁</div>
+          <h3>Ящики со скинами</h3>
+          <p>Открывай ящики и собирай коллекцию скинов — от обычных до ультимативных.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🔄</div>
+          <h3>Перерождение</h3>
+          <p>Запускай перерождение, получай множители и токены, чтобы стать сильнее.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🎵</div>
+          <h3>Музыка и эффекты</h3>
+          <p>Приятная фоновая музыка, звуки ударов и яркие частицы в каждом полёте.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🛡️</div>
+          <h3>Полностью офлайн</h3>
+          <p>Играй без интернета в любое время. Прогресс сохраняется на устройстве.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">⚡</div>
+          <h3>Оптимизация</h3>
+          <p>Сделано на Godot 4 — плавно работает даже на слабых телефонах.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="howto">
+      <h2 class="sec-title">Как установить</h2>
+      <ol class="steps">
+        <li><b>Скачай APK</b> — нажми кнопку «Скачать APK» выше.</li>
+        <li><b>Открой файл</b> — на телефоне покажется предупреждение о неизвестном источнике. Нажми «Разрешить».</li>
+        <li><b>Включи установку</b> — Android попросит разрешить установку из этого источника. Согласись.</li>
+        <li><b>Играй!</b> — иконка «bounce sim» появится на рабочем столе.</li>
+      </ol>
+      <div class="warn">⚠️ Если игра не запускается — скачай файл заново и поставь галочку «Разрешить установку из неизвестных источников» в настройках.</div>
+    </section>
+
+    <section class="faq">
+      <h2 class="sec-title">Вопросы и ответы</h2>
+      <details>
+        <summary>На каких телефонах работает?</summary>
+        <p>Android 8.0 и новее. Официально тестировалось на разрешении 1080×1920, но игра автоматически подстраивается под любой экран.</p>
+      </details>
+      <details>
+        <summary>Это бесплатно?</summary>
+        <p>Да, полностью бесплатно и без рекламы. Внутриигровая валюта зарабатывается игрой.</p>
+      </details>
+      <details>
+        <summary>Нужен интернет?</summary>
+        <p>Нет. Игра и сохранения работают полностью офлайн.</p>
+      </details>
+      <details>
+        <summary>Будут ли обновления?</summary>
+        <p>Да, скачивай новую версию на этой странице и просто устанавливай поверх — прогресс сохранится.</p>
+      </details>
+    </section>
+
+    <footer>
+      <div class="foot-ball"></div>
+      <p>bounce sim • 2026</p>
+      <p class="foot-note">Сделано с 🤖 на Godot 4</p>
+    </footer>
+  </div>
+
+  <script src="js/starfield.js"></script>
+</body>
+</html>

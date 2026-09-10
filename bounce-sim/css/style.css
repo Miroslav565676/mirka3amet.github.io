@@ -60,6 +60,25 @@ h1{
   box-shadow:0 8px 28px rgba(147,51,234,.55); border:1px solid #c084fc55; font-size:1.15rem;
   gap:2px; width:100%;
 }
+.dl-tabs{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;}
+.dl-tab{
+  background:rgba(109,40,217,.12); border:1px solid var(--border); color:var(--fg-dim);
+  border-radius:12px; padding:12px 8px; font-weight:700; font-size:.9rem; cursor:pointer;
+  font-family:inherit; transition:all .12s;
+}
+.dl-tab.active{
+  background:linear-gradient(135deg,#6d28d9,#9333ea); color:#fff; border-color:#c084fc;
+  box-shadow:0 4px 16px rgba(147,51,234,.4);
+}
+.howto-tabs{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;}
+.ht-tab{
+  background:rgba(109,40,217,.12); border:1px solid var(--border); color:var(--fg-dim);
+  border-radius:12px; padding:10px 8px; font-weight:700; font-size:.88rem; cursor:pointer;
+  font-family:inherit; transition:all .12s;
+}
+.ht-tab.active{
+  background:linear-gradient(135deg,#4c1d95,#6d28d9); color:#fff; border-color:#a855f7;
+}
 .btn-download:hover{transform:scale(1.03); box-shadow:0 10px 34px rgba(147,51,234,.7);}
 .btn-download:active{transform:scale(.97);}
 .dl-icon{font-size:1.5rem; line-height:1;}

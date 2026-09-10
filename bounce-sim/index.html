@@ -40,6 +40,7 @@
         <span class="badge">📶 Офлайн</span>
         <span class="badge">🎮 Аркада</span>
         <span class="badge">📱 Android 8+</span>
+        <span class="badge">🖥️ ПК (Windows)</span>
       </div>
     </header>
 
@@ -75,12 +76,20 @@
       <div class="hero-text">
         <h2>Шар летит.<br>Каждый удар — деньги!</h2>
         <p>Твоя задача — не дать шару упасть на круг. Отбивайся, зарабатывай монеты и прокачивайся до бесконечности.</p>
-        <a class="btn btn-download" href="https://github.com/Miroslav565676/mirka3amet.github.io/releases/download/v1.1.0/bounce-sim.apk" download="bounce-sim.apk">
+        <div class="dl-tabs">
+        <button class="dl-tab active" data-url="https://github.com/Miroslav565676/mirka3amet.github.io/releases/download/v1.1.0/bounce-sim.apk" data-sub="APK • 59 МБ • Android" data-label="APK">
+          📱 Android
+        </button>
+        <button class="dl-tab" data-url="https://github.com/Miroslav565676/mirka3amet.github.io/releases/download/v1.1.0/bounce-sim-windows.zip" data-sub="ZIP • 38 МБ • Windows" data-label="ZIP">
+          🖥️ ПК (Windows)
+        </button>
+      </div>
+      <a class="btn btn-download" id="dlBtn" href="https://github.com/Miroslav565676/mirka3amet.github.io/releases/download/v1.1.0/bounce-sim.apk" download="bounce-sim.apk">
           <span class="dl-icon">⬇</span>
           Скачать APK
-          <span class="dl-meta">v1.1.0 • 59 МБ • Android</span>
-        </a>
-        <div class="dl-note">Установка с этого сайта безопасна. Разреши «установку из неизвестных источников» при первом запуске.</div>
+          <span class="dl-meta" id="dlMeta">v1.1.0 • 59 МБ • Android</span>
+      </a>
+        <div class="dl-note">Установка с этого сайта безопасна. На Android разреши «установку из неизвестных источников» при первом запуске.</div>
       </div>
     </section>
 
@@ -122,13 +131,23 @@
 
     <section class="howto">
       <h2 class="sec-title">Как установить</h2>
-      <ol class="steps">
-        <li><b>Скачай APK</b> — нажми кнопку «Скачать APK» выше.</li>
+      <div class="howto-tabs">
+        <button class="ht-tab active" data-for="ht-android">📱 Android</button>
+        <button class="ht-tab" data-for="ht-pc">🖥️ ПК</button>
+      </div>
+      <ol class="steps" id="ht-android">
+        <li><b>Скачай APK</b> — выбери вкладку «Android» выше и нажми кнопку «Скачать».</li>
         <li><b>Открой файл</b> — на телефоне покажется предупреждение о неизвестном источнике. Нажми «Разрешить».</li>
         <li><b>Включи установку</b> — Android попросит разрешить установку из этого источника. Согласись.</li>
         <li><b>Играй!</b> — иконка «bounce sim» появится на рабочем столе.</li>
       </ol>
-      <div class="warn">⚠️ Если игра не запускается — скачай файл заново и поставь галочку «Разрешить установку из неизвестных источников» в настройках.</div>
+      <ol class="steps" id="ht-pc" style="display:none;">
+        <li><b>Скачай ZIP</b> — выбери вкладку «ПК (Windows)» выше и нажми кнопку «Скачать».</li>
+        <li><b>Распакуй</b> — правый клик по архиву → «Извлечь всё».</li>
+        <li><b>Запусти</b> — открой папку и двойным кликом запусти <b>bounce_sim_windows.exe</b> (папку с .pck не удаляй).</li>
+        <li><b>Играй!</b> — для удобства можно закрепить ярлык на рабочем столе.</li>
+      </ol>
+      <div class="warn">⚠️ Windows может показать «Защитник Windows» — нажми «Подробнее» → «Выполнить в любом случае». Если игра не запускается — скачай файл заново.</div>
     </section>
 
     <section class="faq">
@@ -159,5 +178,6 @@
   </div>
 
   <script src="js/starfield.js"></script>
+  <script src="js/download.js"></script>
 </body>
 </html>
